@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Free Medium Member Stories",
+  "version": "1.0.0",
+  "description": "Reads Medium articles for free by turning the story title into a link to freedium.cfd.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [],
+  "host_permissions": ["<all_urls>"]
+}
